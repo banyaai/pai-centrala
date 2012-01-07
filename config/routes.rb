@@ -1,10 +1,14 @@
 PaiCentrala::Application.routes.draw do
-  get "pages/home"
+#  get "pages/home"
+  match '/', :to => 'pages#home'
 
-  get "pages/contact"
+#  get "pages/contact"
+  match '/contact', :to => 'pages#contact'
 
-  get "pages/about"
+#  get "pages/about"
+  match '/about', :to => 'pages#about'
 
+  match '/help', :to => 'pages#help'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
