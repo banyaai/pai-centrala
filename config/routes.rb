@@ -1,7 +1,7 @@
 PaiCentrala::Application.routes.draw do
 #  get "pages/home"
-  match '/', :to => 'pages#home'
-
+#  match '/', :to => 'pages#home'
+  root :to => 'pages#home'
 #  get "pages/contact"
   match '/contact', :to => 'pages#contact'
 
