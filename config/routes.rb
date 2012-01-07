@@ -1,6 +1,9 @@
 PaiCentrala::Application.routes.draw do
+  get "users/new"
+
+  match '/signup', :to => 'users#new'
+
 #  get "pages/home"
-#  match '/', :to => 'pages#home'
   root :to => 'pages#home'
 #  get "pages/contact"
   match '/contact', :to => 'pages#contact'
