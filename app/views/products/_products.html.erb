@@ -1,0 +1,10 @@
+<li>
+  <%= product.name %>, <%= product.prize %>
+  <% if !current_user.nil? %>
+  , <%= product.amount %>
+    <% if current_user.admin? %>
+      | <%= link_to "delete", product, :method => :delete, :confirm => "You sure?",
+                                       :title => "Delete #{product.name} %>
+    <% end %>
+  <% end %>
+</li>
