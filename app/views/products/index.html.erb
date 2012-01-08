@@ -1,0 +1,10 @@
+<h1>All products</h1>
+
+<ul class="products">
+  Name, Party, Votes
+  <% @products.each do |product| %>
+    <li>
+      <%= product.name%>, <%= product.prize %>, <%= product.amount %>
+    </li>
+  <% end %>
+</ul>

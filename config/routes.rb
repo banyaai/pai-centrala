@@ -1,6 +1,19 @@
 PaiCentrala::Application.routes.draw do
-  get "sessions/new"
+#  get "api/index"
 
+#  get "api/update"
+
+#  get "products/new"
+
+#  get "products/index"
+
+#  get "products/show"
+
+  
+  get "sessions/new"
+  
+  resources :api
+  resources :products
   resources :users
   resources :sessions, :only =>[:new, :create, :destroy]
 
