@@ -1,0 +1,11 @@
+<tr>
+  <td><%= product.name %></td>
+  <td><%= product.prize %></td>
+  <% if !current_user.nil? %>
+    <td><%= product.amount %></td>
+    <% if current_user.admin? %>
+      <td><%= link_to "delete", product, :method => :delete, :confirm => "You sure?",
+                                       :title => "Delete #{product.name} %></td>
+    <% end %>
+  <% end %>
+</tr>
