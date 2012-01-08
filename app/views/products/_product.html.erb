@@ -5,7 +5,7 @@
     <td><%= product.amount %></td>
     <% if current_user.admin? %>
       <td><%= link_to "delete", product, :method => :delete, :confirm => "You sure?",
-                                       :title => "Delete #{product.name} %></td>
+                                       :title => "Delete #{product.name}" %></td>
     <% end %>
   <% end %>
 </tr>

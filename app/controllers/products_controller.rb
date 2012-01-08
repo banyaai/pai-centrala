@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
     @product.amount = 0
     if @product.save
       flash[:success] = "Product added successfuly"
-      redirect_to candidates_path
+      redirect_to products_path
     else
       render 'new'
     end
