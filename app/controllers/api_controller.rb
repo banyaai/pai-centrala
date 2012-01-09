@@ -9,7 +9,7 @@ class ApiController < ApplicationController
   def update
     if Product.exists?(:id => params[:id])
       @product = Product.find(params[:id])
-      @product.amount += params[:votes].to_i
+      @product.amount += params[:amount].to_i
       @product.save
       return head(:ok)
     else
