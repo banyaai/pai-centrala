@@ -18,7 +18,6 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(params[:product])
-    @product.amount = 0
     if @product.save
       flash[:success] = "Product added successfuly"
       redirect_to products_path
