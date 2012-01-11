@@ -10,6 +10,7 @@ class ApiController < ApplicationController
     if Product.exists?(:id => params[:id])
       @product = Product.find(params[:id])
       @product.amount -= params[:amount].to_i
+      @product.amount =0 if @product.amount < 0
       @product.save
       return head(:ok)
     else
