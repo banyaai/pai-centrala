@@ -11,7 +11,7 @@ class ApiController < ApplicationController
       @product = Product.find(params[:id])
       @product.amount -= params[:amount].to_i
       if @product.amount < 0
-        return head(:not_found)
+        return head(:not_modified)
       else
         @product.save
         return head(:ok)
