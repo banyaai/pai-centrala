@@ -20,7 +20,7 @@ class ApiController < ApplicationController
   private
     
     def to_client
-      Product.all.map { |p| {"id" => p.id, "name" => p.name, "prize" => p.prize, "votes" => 0} }
+      Product.all.map { |p| {"id" => p.id, "name" => p.name, "prize" => p.prize, "amount" => p.amount} }
     end
 
     def authenticate
